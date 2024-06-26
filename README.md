@@ -1,25 +1,17 @@
 <p>Clarusway<img align="right"
   src="https://secure.meetupstatic.com/photos/event/3/1/b/9/600_488352729.jpeg"  width="15px"></p>
 
-# Project-03 : Weather Condition App (JS-03)
+# Weather Condition App 
 
 ## Description
 Project aims to display current weather data of searched city around the world with fetching Weather Api data.
 
-## Learning Outcomes
-
-At the end of the this project, students will be able to;
-
-- analyze a problem, create a weather condition app populated with a real weather api.
-
-- demonstrate their knowledge of algorithmic design principles.
 
    
 ## Problem Statement
 
 - Design a weather condition page following the design and populate data for searched city with using of axios in JS.
 
-![Form](weather_app.gif)
 
 User story;
 
@@ -31,8 +23,7 @@ User story;
 
 🔥 You can use [OpenWeather Api](https://openweathermap.org/) for your app. 
 
-## HTML / CSS Structure
+## App gif
 
-- You can find HTML / CSS Structure [here](./HTML-CSS/)
 
-<p align="center"> <strong> ✍ Happy Coding ⌛ </strong> <p>
+
