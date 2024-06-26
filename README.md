@@ -25,5 +25,7 @@ User story;
 
 ## App gif
 
+![Weather App gif](<weather-app gif.gif>)
+
 
 
