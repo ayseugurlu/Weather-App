@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/style.css">
   <script src="js/aes.js"></script>
   <script src="js/Extentions.js"></script>
@@ -19,13 +20,26 @@
             </h1>
       
       <form>
-        <input type="text" placeholder="Search for a city" autofocus>
-        <button type="submit">SUBMIT</button>
+        <div><input type="text" placeholder="Search for a city" autofocus>
+        <i id="locate" class="fa fa-location-dot"></i></div>
+        
+        <button type="submit">SUBMIT</button> 
+        
         <span class="msg"></span>
       </form>
     </div>
   </section>
   <section class="ajax-section">
+    <div
+            class="container "
+            style="top: 2rem"
+            id="userLocation"
+          >
+          <ul>
+
+          </ul>
+         
+        </div>
     <div class="container">
       <ul class="cities">
       </ul>
