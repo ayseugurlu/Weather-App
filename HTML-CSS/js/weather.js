@@ -4,6 +4,7 @@ const message = document.querySelector(".msg");
 const form = document.querySelector("form");
 const locateI = document.getElementById("locate");
 const locationDiv = document.getElementById("userLocation");
+const languageButton =document.querySelector(".language")
 
 const cities = document.querySelector(".cities");
 
@@ -24,8 +25,22 @@ form.addEventListener("submit", (e) => {
   let inputValue = input.value.trim().toLowerCase();
 
   if (searchedCities.includes(inputValue)) {
+
+    if(lang== "en"){
     message.textContent = `You already know the weather for ${input.value}.Please search for another city. 😎`;
     form.reset();
+    setTimeout(() => {
+      message.textContent=""
+    }, 3000);
+  
+  }else if(lang=="de"){
+      message.textContent = `Sie haben schon das Wetter für ${input.value} gesucht. Bitte suchen Sie nach einer anderen Stadt.😎` 
+      form.reset();
+
+      setTimeout(() => {
+        message.textContent=""
+      }, 3000);
+    }
   } else {
     showScreen(inputValue);
     searchedCities.push(inputValue);
@@ -46,6 +61,20 @@ locateI.addEventListener("click", () => {
     console.log(showLocationWeather(url));
   });
 });
+
+
+languageButton.addEventListener("click" , (e) => {
+  console.log(e.target)
+
+  if(e.target.textContent === "EN"){
+    input.setAttribute("placeholder", "Search for a city")
+    lang="en"
+  }else if(e.target.textContent === "DE"){
+    input.setAttribute("placeholder", "Suche nach einer Stadt")
+    lang="de"
+  }
+
+})
 
 //& Functons
 const showScreen = async (item) => {
@@ -111,6 +140,9 @@ const showLocationWeather = async (a) => {
 
   const iconURL = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${locationData.weather[0].icon}.svg`; //^ alternatif
 
+
+  if(!searchedCities.includes(locationData.name)){
+
   locationDiv.innerHTML += `
 
    
@@ -142,6 +174,22 @@ const showLocationWeather = async (a) => {
     
    
     `;
+
+    searchedCities.push(locationData.name)
+
+    console.log(searchedCities)
+
+  }else{
+
+    if(lang =="de"){
+
+    alert(`Sie kennen das Wetter für die ${locationData.name} bereits.`)
+    }else if(lang =="en"){
+      alert(`You already know the weather for ${locationData.name}.`)
+  }
+
+}
+
   const deleteButton = document.querySelectorAll(".fa-circle-xmark");
   console.log(deleteButton);
   deleteButton.forEach((button) => {
@@ -149,4 +197,4 @@ const showLocationWeather = async (a) => {
       button.closest("li").remove();
     });
   });
-};
+}
