@@ -24,7 +24,7 @@ User story;
 
 ## App gif
 
-![Weather App gif](<weather-app gif.gif>)
+![Weather App gif]()
 
 ## App
 https://ayseugurlu.github.io/Weather-App/HTML-CSS/
