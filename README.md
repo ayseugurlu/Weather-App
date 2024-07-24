@@ -5,21 +5,6 @@ https://ayseugurlu.github.io/Weather-App/HTML-CSS/
 ## Project Purpose
 The primary objective of this project is to enhance and demonstrate my skills in working with APIs by developing a web application that fetches and displays weather data from the OpenWeatherMap API using the `axios` library and `async/await` for API requests. This project serves as a practical application to showcase my proficiency in using `axios`, `async/await`, and `fetch` for API requests. The application provides weather information based on the user's location and allows searching for weather data of a specific city.
 
-## Project Skeleton
-
-```
-(folder)
-
-|----assets
-|----img
-|----LICENSE
-|----project.gif
-|----app.js
-|----index.html
-|----style.css
-|----readme.md
-
-```
 
 
 ## Outcome
